@@ -203,20 +203,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
         }
 
         .nav-left {
-            flex: 1;
             display: flex;
-            justify-content: flex-start;
+            align-items: center;
+            flex-shrink: 0;
         }
 
         .nav-right {
-            flex: 1;
             display: flex;
-            justify-content: flex-end;
             align-items: center;
-            gap: 16px;
+            gap: 32px;
+            /* Increased gap to push Rezervasyon button away from İletişim */
+            margin-left: auto;
         }
 
         .logo {
@@ -240,11 +241,11 @@
         }
 
         .nav-links {
-            flex: 0 0 auto;
             display: flex;
             list-style: none;
             gap: 36px;
             align-items: center;
+            margin: 0 auto;
         }
 
         .nav-links a {
@@ -1532,12 +1533,11 @@
         }
 
         @media (max-width: 992px) {
-            .nav-left {
-                flex: auto;
-            }
 
-            .nav-right {
-                flex: auto;
+            .nav-left,
+            .nav-right,
+            .nav-links {
+                margin: 0;
             }
 
             .about-grid {
