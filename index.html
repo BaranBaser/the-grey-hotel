@@ -4,10 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a1a1a">
+    <link rel="icon" type="image/png" href="images/logo2.webp">
+    <link rel="apple-touch-icon" href="images/logo2.webp">
     <meta name="description"
         content="The Grey Hotel - Sakarya'nın kalbinde lüks ve konforlu bir konaklama deneyimi. Modern odalarımız, leziz kahvaltımız ve yüksek hızlı Wi-Fi hizmetimizle misafirlerimizi ağırlıyoruz.">
     <meta name="keywords"
         content="The Grey Hotel, Sakarya otel, Serdivan otel, lüks konaklama, Sapanca yakınlarında otel, Sakarya konaklama">
+    <meta property="og:title" content="The Grey Hotel | Sakarya'da Lüks Konaklama">
+    <meta property="og:description"
+        content="Sakarya'nın kalbinde lüks ve konforlu bir konaklama deneyimi. Modern odalarımız ve eşsiz ambiyansımızı keşfedin.">
+    <meta property="og:image" content="https://the-grey-hotel.baranbaser31.workers.dev/images/hero.jpeg">
+    <meta property="og:url" content="https://the-grey-hotel.baranbaser31.workers.dev/">
+    <meta property="og:type" content="website">
     <title>The Grey Hotel | Sakarya'da Lüks Konaklama</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,6 +66,22 @@
             color: var(--color-off-white);
             line-height: 1.7;
             overflow-x: hidden;
+        }
+
+        /* ===== SELECTION & FOCUS ===== */
+        ::selection {
+            background-color: var(--color-accent);
+            color: var(--color-black);
+        }
+
+        ::-moz-selection {
+            background-color: var(--color-accent);
+            color: var(--color-black);
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--color-accent) !important;
+            outline-offset: 4px;
         }
 
         h1,
@@ -213,6 +238,36 @@
             color: var(--color-light-silver);
             position: relative;
             padding: 4px 0;
+        }
+
+        .nav-links li:last-child {
+            margin-left: 16px;
+        }
+
+        .nav-btn-cta {
+            padding: 10px 24px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-black) !important;
+            background: linear-gradient(135deg, var(--color-accent) 0%, #d4c4a8 50%, var(--color-accent) 100%);
+            background-size: 200% auto;
+            border-radius: 4px;
+            transition: all 0.4s ease;
+            display: inline-block;
+        }
+
+        .nav-btn-cta::after {
+            display: none;
+            /* Hide the underline effect for the button */
+        }
+
+        .nav-btn-cta:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(184, 168, 138, 0.3);
+            color: var(--color-black) !important;
         }
 
         .nav-links a::after {
@@ -1986,17 +2041,17 @@
 
     <!-- ===== SIDE KIRPIK DECORATIONS ===== -->
     <div class="kirpik-decoration kirpik-sol" id="kirpikSol">
-        <img src="images/logo.sol.kirpik.png" alt="Dekoratif eleman">
+        <img src="images/logo.sol.kirpik.webp" alt="Dekoratif eleman">
     </div>
     <div class="kirpik-decoration kirpik-sag" id="kirpikSag">
-        <img src="images/logo.sag.kirpik.png" alt="Dekoratif eleman">
+        <img src="images/logo.sag.kirpik.webp" alt="Dekoratif eleman">
     </div>
 
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="#hero" class="logo">
-                <img src="images/logo2.png" alt="The Grey Hotel Logo" class="nav-logo-img">
+                <img src="images/logo2.webp" alt="The Grey Hotel Logo" class="nav-logo-img">
                 THE GREY <span style="color: #ff3333; margin-left: 8px;">HOTEL</span>
             </a>
             <ul class="nav-links" id="navLinks">
@@ -2006,6 +2061,7 @@
                 <li><a href="#restaurant" data-nav>Restoran</a></li>
                 <li><a href="#info" data-nav>Bilgiler</a></li>
                 <li><a href="#contact" data-nav>İletişim</a></li>
+                <li><a href="#contact" class="nav-btn-cta">Rezervasyon</a></li>
             </ul>
             <button class="menu-toggle" id="menuToggle" aria-label="Menüyü aç/kapat">
                 <span></span>
@@ -2018,7 +2074,7 @@
     <!-- ===== HERO SECTION ===== -->
     <section class="hero" id="hero">
         <div class="hero-bg">
-            <img src="images/hero.jpeg" alt="The Grey Hotel dış cephe gece görünümü">
+            <img src="images/hero.webp" alt="The Grey Hotel dış cephe gece görünümü">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -2075,7 +2131,7 @@
                     </div>
                 </div>
                 <div class="about-image reveal-right">
-                    <img src="images/lobby.jpeg" alt="The Grey Hotel lobi alanı">
+                    <img src="images/lobby.webp" alt="The Grey Hotel lobi alanı">
                 </div>
             </div>
         </div>
@@ -2229,7 +2285,7 @@
 
     <!-- ===== PARALLAX DIVIDER 1 ===== -->
     <div class="parallax-divider" data-parallax>
-        <img src="images/tabela.jpg" alt="The Grey Hotel Tabela" data-parallax-img>
+        <img src="images/tabela.webp" alt="The Grey Hotel Tabela" data-parallax-img>
         <div class="parallax-overlay"></div>
         <div class="parallax-text">
             <h2>Eşsiz Bir Deneyim</h2>
@@ -2248,27 +2304,27 @@
 
             <div class="rooms-grid">
                 <div class="room-card reveal-left">
-                    <img src="images/oda_cift_tek_yatak.jpeg" alt="Deluxe Oda">
+                    <img src="images/oda_cift_tek_yatak.webp" alt="Deluxe Oda">
                     <div class="room-label">Deluxe Oda</div>
                 </div>
                 <div class="room-card reveal-right">
-                    <img src="images/oda_cift_yatak.jpeg" alt="Premium Oda">
+                    <img src="images/oda_cift_yatak.webp" alt="Premium Oda">
                     <div class="room-label">Premium Oda</div>
                 </div>
                 <div class="room-card reveal-left">
-                    <img src="images/oda_cift_tek_yatak2.jpeg" alt="Standart Oda">
+                    <img src="images/oda_cift_tek_yatak2.webp" alt="Standart Oda">
                     <div class="room-label">Standart Oda</div>
                 </div>
                 <div class="room-card reveal-right">
-                    <img src="images/oda_cift_tek_yatak3.jpeg" alt="Superior Oda">
+                    <img src="images/oda_cift_tek_yatak3.webp" alt="Superior Oda">
                     <div class="room-label">Superior Oda</div>
                 </div>
                 <div class="room-card reveal-left">
-                    <img src="images/oda_gunduz.jpg" alt="Deluxe Oda, Şehir Manzaralı">
+                    <img src="images/oda_gunduz.webp" alt="Deluxe Oda, Şehir Manzaralı">
                     <div class="room-label">Deluxe Oda, Şehir Manzaralı</div>
                 </div>
                 <div class="room-card reveal-right">
-                    <img src="images/oda_oturma.jpg" alt="Standart Oda, Manzaralı">
+                    <img src="images/oda_oturma.webp" alt="Standart Oda, Manzaralı">
                     <div class="room-label">Standart Oda, Manzaralı</div>
                 </div>
             </div>
@@ -2277,7 +2333,7 @@
 
     <!-- ===== PARALLAX DIVIDER 2 ===== -->
     <div class="parallax-divider" data-parallax>
-        <img src="images/ambiyans2.jpeg" alt="The Grey Hotel" data-parallax-img>
+        <img src="images/ambiyans2.webp" alt="The Grey Hotel" data-parallax-img>
         <div class="parallax-overlay"></div>
         <div class="parallax-text">
             <h2>Lezzet & Keyif</h2>
@@ -2296,19 +2352,19 @@
 
             <div class="restaurant-grid">
                 <div class="gallery-item reveal-left">
-                    <img src="images/restoran3.jpeg" alt="The Grey Hotel - Restoran">
+                    <img src="images/restoran3.webp" alt="The Grey Hotel - Restoran">
                 </div>
                 <div class="gallery-item reveal-right">
-                    <img src="images/restoran1.jpeg" alt="The Grey Hotel - Kafe">
+                    <img src="images/restoran1.webp" alt="The Grey Hotel - Kafe">
                 </div>
                 <div class="gallery-item reveal-left">
-                    <img src="images/kahvalti.jpg" alt="The Grey Hotel - Kahvaltı">
+                    <img src="images/kahvalti.webp" alt="The Grey Hotel - Kahvaltı">
                 </div>
                 <div class="gallery-item reveal-right">
-                    <img src="images/restoran2.jpeg" alt="The Grey Hotel - Restoran İç Mekan">
+                    <img src="images/restoran2.webp" alt="The Grey Hotel - Restoran İç Mekan">
                 </div>
                 <div class="gallery-item full-width reveal-scale">
-                    <img src="images/restoran4.jpeg" alt="The Grey Hotel - Bar">
+                    <img src="images/restoran4.webp" alt="The Grey Hotel - Bar">
                 </div>
             </div>
         </div>
@@ -2325,7 +2381,7 @@
 
             <!-- Hotel Side View -->
             <div class="contact-hero-img reveal">
-                <img src="images/otel_yan.jpeg" alt="The Grey Hotel - Yandan Görünüm">
+                <img src="images/otel_yan.webp" alt="The Grey Hotel - Yandan Görünüm">
             </div>
 
             <div class="contact-grid reveal">
@@ -2388,7 +2444,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="logo" style="font-size: 1.5rem; letter-spacing: 4px;">
-                    <img src="images/logo2.png" alt="The Grey Hotel Logo"
+                    <img src="images/logo2.webp" alt="The Grey Hotel Logo"
                         style="height: 40px; width: auto; margin-right: 12px;">
                     THE GREY <span style="color: #ff3333; margin-left: 6px;">HOTEL</span>
                 </div>
@@ -2596,7 +2652,7 @@
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('preloader').classList.add('loaded');
-            }, 800);
+            }, 500);
         });
 
         // ===== SCROLL PROGRESS BAR =====
@@ -2939,6 +2995,30 @@
                 }
             });
         });
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "The Grey Hotel",
+      "description": "Sakarya'nın kalbinde lüks ve konforlu bir konaklama deneyimi. Modern odalarımız ve eşsiz ambiyansımızı keşfedin.",
+      "image": "https://the-grey-hotel.baranbaser31.workers.dev/images/hero.webp",
+      "url": "https://the-grey-hotel.baranbaser31.workers.dev/",
+      "telephone": "+90 264 211 11 11",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Arabacıalanı Mah. Mert Sok. No: 4A",
+        "addressLocality": "Serdivan",
+        "addressRegion": "Sakarya",
+        "postalCode": "54050",
+        "addressCountry": "TR"
+      },
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "4"
+      },
+      "priceRange": "$$"
+    }
     </script>
 </body>
 
