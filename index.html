@@ -55,6 +55,156 @@
             --shadow-strong: 0 12px 60px rgba(0, 0, 0, 0.35);
         }
 
+        /* ===== LIGHT THEME OVERRIDES ===== */
+        body.light-theme {
+            --color-black: #fcfcfc;
+            --color-dark: #f0f0f0;
+            --color-anthracite: #e0e0e0;
+            --color-charcoal: #d0d0d0;
+            --color-gray: #707070;
+            /* Daha koyu gri */
+            --color-silver: #444444;
+            /* Daha okunaklı bilgi yazıları */
+            --color-light-silver: #2a2a2a;
+            /* Menü yazıları daha net siyah/gri */
+            --color-off-white: #111111;
+            --color-white: #0a0a0a;
+            --color-pure-white: #000000;
+            --color-accent: #7c6a3f;
+            /* Çok daha koyu altın rengi (okunabilir) */
+            --color-accent-dark: #5c4a25;
+            --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.08);
+            --shadow-strong: 0 12px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Navbar & Footer text logos filter */
+        body.light-theme .nav-logo-img,
+        body.light-theme .footer .logo img {
+            filter: invert(1);
+        }
+
+        /* Platform logolarını siyah yap */
+        body.light-theme .platform-link img {
+            filter: grayscale(100%) brightness(0) !important;
+            opacity: 0.7;
+        }
+
+        /* Footer link çerçevelerini beyaz modda belirginleştir */
+        body.light-theme .social-links a,
+        body.light-theme .platform-link {
+            border-color: rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.02);
+            color: #111;
+        }
+
+        body.light-theme .social-links a:hover,
+        body.light-theme .platform-link:hover {
+            background: rgba(184, 168, 138, 0.1);
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+        }
+
+        /* Override dark glassmorphism cards to white glassmorphism */
+        body.light-theme .room-card,
+        body.light-theme .amenity-card,
+        body.light-theme .info-detail-card,
+        body.light-theme .contact-form,
+        body.light-theme .contact-info,
+        body.light-theme .review-card,
+        body.light-theme .paid-service-item {
+            background: linear-gradient(160deg, #ffffff, #f9f9f9) !important;
+            border: 1px solid rgba(0, 0, 0, 0.05) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03) !important;
+        }
+
+        body.light-theme .room-card:hover,
+        body.light-theme .amenity-card:hover,
+        body.light-theme .info-detail-card:hover,
+        body.light-theme .review-card:hover,
+        body.light-theme .paid-service-item:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08) !important;
+            border-color: rgba(184, 168, 138, 0.4) !important;
+        }
+
+        /* Navbar at the top (unscrolled) needs background in light mode to be readable over the bright hero image */
+        body.light-theme .navbar {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        body.light-theme .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        body.light-theme .footer {
+            background: #ffffff;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        /* Specific text and block readability overrides for Light Theme */
+
+        /* Hero title & subtitle readability */
+        body.light-theme .hero-content .hero-label {
+            color: #3b280c;
+            /* Daha koyu altın / kahverengi */
+            font-weight: 800;
+            /* Daha kalın */
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
+        }
+
+        body.light-theme .hero-content h1 {
+            color: #ffffff;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        body.light-theme .hero-content .hero-sub {
+            color: #ffffff;
+            /* Yazıyı beyaz yap */
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.9);
+            /* Okunabilirlik için keskin gölge */
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+            /* Beyaz saydam arkaplan */
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Check-in / Check-out blocks */
+        body.light-theme .info-card {
+            background: #e6e6e6;
+            /* Çok açık gri şeffaf */
+            border-color: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        body.light-theme .info-card h3 {
+            color: var(--color-silver);
+        }
+
+        body.light-theme .info-card .time {
+            color: #111111;
+        }
+
+        /* Parallax dividers text readability (backgrounds are dark) */
+        body.light-theme .parallax-divider .parallax-text h2 {
+            color: #ffffff !important;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8) !important;
+        }
+
+        body.light-theme .parallax-divider .parallax-text p {
+            color: #ffffff !important;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+        }
+
+        body.light-theme .nav-links.active {
+            background: rgba(255, 255, 255, 0.98);
+        }
+
         html {
             scroll-behavior: smooth;
             font-size: 16px;
@@ -485,12 +635,10 @@
         }
 
         .btn-cta:hover {
-            background-position: right center;
             color: var(--color-black);
             opacity: 1;
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 15px 40px rgba(184, 168, 138, 0.45);
-            letter-spacing: 6px;
+            /* Yalnızca parlama efekti kalsın, hareket/büyüme kaldırıldı */
+            box-shadow: 0 0 30px rgba(184, 168, 138, 0.8);
             animation: none;
         }
 
@@ -1497,6 +1645,33 @@
         .reveal.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        /* ===== THEME TOGGLE BUTTON ===== */
+        .theme-toggle-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--color-black);
+            color: var(--color-accent);
+            border: 1px solid var(--color-accent);
+            cursor: pointer;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            box-shadow: var(--shadow-medium);
+            transition: var(--transition-smooth);
+        }
+
+        .theme-toggle-btn:hover {
+            transform: scale(1.1) rotate(15deg);
+            background: var(--color-accent);
+            color: #ffffff;
         }
 
         /* ===== RESPONSIVE ===== */
@@ -2563,6 +2738,11 @@
         </div>
     </footer>
 
+    <!-- ===== THEME TOGGLE ===== -->
+    <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Temayı Değiştir">
+        <i class="fas fa-sun"></i>
+    </button>
+
     <!-- ===== JAVASCRIPT ===== -->
     <script>
         // ===== Sticky Navbar =====
@@ -2572,6 +2752,40 @@
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ===== Theme Toggle =====
+        const themeToggleBtn = document.getElementById('themeToggleBtn');
+        const themeIcon = themeToggleBtn.querySelector('i');
+        const heroBgImg = document.querySelector('.hero-bg img');
+
+        function updateHeroImage(theme) {
+            if (heroBgImg) {
+                if (theme === 'light') {
+                    heroBgImg.src = 'images/sabah.otel.jpg';
+                } else {
+                    heroBgImg.src = 'images/hero.webp';
+                }
+            }
+        }
+
+        if (localStorage.getItem('thegrey_theme') === 'light') {
+            document.body.classList.add('light-theme');
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
+            updateHeroImage('light');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            if (document.body.classList.contains('light-theme')) {
+                localStorage.setItem('thegrey_theme', 'light');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+                updateHeroImage('light');
+            } else {
+                localStorage.setItem('thegrey_theme', 'dark');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+                updateHeroImage('dark');
             }
         });
 
