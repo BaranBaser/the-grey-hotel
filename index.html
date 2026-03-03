@@ -2390,7 +2390,7 @@
                     </div>
                 </div>
                 <div class="about-image reveal-right">
-                    <img src="images/lobby.webp" alt="The Grey Hotel lobi alanı">
+                    <img src="images/lobby.webp" id="lobbyImage" alt="The Grey Hotel lobi alanı">
                 </div>
             </div>
         </div>
@@ -2544,7 +2544,7 @@
 
     <!-- ===== PARALLAX DIVIDER 1 ===== -->
     <div class="parallax-divider" data-parallax>
-        <img src="images/tabela.webp" alt="The Grey Hotel Tabela" data-parallax-img>
+        <img src="images/tabela.webp" id="ambiyans1Image" alt="The Grey Hotel Tabela" data-parallax-img>
         <div class="parallax-overlay"></div>
         <div class="parallax-text">
             <h2>Eşsiz Bir Deneyim</h2>
@@ -2592,7 +2592,7 @@
 
     <!-- ===== PARALLAX DIVIDER 2 ===== -->
     <div class="parallax-divider" data-parallax>
-        <img src="images/ambiyans2.webp" alt="The Grey Hotel" data-parallax-img>
+        <img src="images/ambiyans2.webp" id="ambiyans2Image" alt="The Grey Hotel" data-parallax-img>
         <div class="parallax-overlay"></div>
         <div class="parallax-text">
             <h2>Lezzet & Keyif</h2>
@@ -2759,14 +2759,21 @@
         const themeToggleBtn = document.getElementById('themeToggleBtn');
         const themeIcon = themeToggleBtn.querySelector('i');
         const heroBgImg = document.querySelector('.hero-bg img');
+        const lobbyImg = document.getElementById('lobbyImage');
+        const ambiyans1Img = document.getElementById('ambiyans1Image');
+        const ambiyans2Img = document.getElementById('ambiyans2Image');
 
         function updateHeroImage(theme) {
-            if (heroBgImg) {
-                if (theme === 'light') {
-                    heroBgImg.src = 'images/sabah.otel.jpg';
-                } else {
-                    heroBgImg.src = 'images/hero.webp';
-                }
+            if (theme === 'light') {
+                if (heroBgImg) heroBgImg.src = 'images/sabah.otel.jpg';
+                if (lobbyImg) lobbyImg.src = 'images/lobby.gunduz.jpg';
+                if (ambiyans1Img) ambiyans1Img.src = 'images/ambiyans1.gunduz.jpg';
+                if (ambiyans2Img) ambiyans2Img.src = 'images/ambiyans2.gunduz.jpg';
+            } else {
+                if (heroBgImg) heroBgImg.src = 'images/hero.webp';
+                if (lobbyImg) lobbyImg.src = 'images/lobby.webp';
+                if (ambiyans1Img) ambiyans1Img.src = 'images/tabela.webp';
+                if (ambiyans2Img) ambiyans2Img.src = 'images/ambiyans2.webp';
             }
         }
 
