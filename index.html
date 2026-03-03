@@ -2497,6 +2497,8 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 The Grey Hotel. Tüm Hakları Saklıdır.</p>
+                <a href="https://youtu.be/ed-US86OtCY?t=2" id="sasi-link" target="_blank"
+                    style="display: none; opacity: 0; color: var(--color-gray); font-size: 0.75rem; margin-top: 12px; text-decoration: none; transition: opacity 1.5s ease; letter-spacing: 4px;">SASI</a>
             </div>
         </div>
     </footer>
@@ -3019,6 +3021,41 @@
                 }
             });
         });
+
+        // ===== EASTER EGG =====
+        const emanetKasasi = Array.from(document.querySelectorAll('.amenity-card h4')).find(el => el.textContent.includes('Emanet Kasası'));
+        if (emanetKasasi) {
+            const triggerCard = emanetKasasi.parentElement;
+            triggerCard.style.cursor = 'pointer';
+            let eggClicks = 0;
+            let eggTimer;
+            let keysPressed = '';
+
+            triggerCard.addEventListener('click', () => {
+                eggClicks++;
+                clearTimeout(eggTimer);
+
+                if (eggClicks === 5) {
+                    const keyHandler = (e) => {
+                        keysPressed += e.key.toLowerCase();
+                        if (keysPressed.length > 4) keysPressed = keysPressed.slice(-4);
+
+                        if (keysPressed === 'sasi') {
+                            const link = document.getElementById('sasi-link');
+                            if (link) {
+                                link.style.display = 'inline-block';
+                                setTimeout(() => link.style.opacity = '1', 50);
+                            }
+                            window.removeEventListener('keydown', keyHandler);
+                        }
+                    };
+                    window.addEventListener('keydown', keyHandler);
+                    eggClicks = 0;
+                }
+
+                eggTimer = setTimeout(() => { eggClicks = 0; }, 2000);
+            });
+        }
     </script>
     <script type="application/ld+json">
     {
