@@ -247,32 +247,32 @@
             margin-left: 16px;
         }
 
-        .nav-btn-cta {
+        .nav-links a.nav-btn-cta {
             padding: 10px 24px;
             font-size: 0.75rem;
             font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: var(--color-pure-white) !important;
-            background-color: transparent !important;
-            background-image: none !important;
+            color: var(--color-pure-white);
+            background-color: rgba(184, 168, 138, 0);
+            background-image: none;
             border: 1px solid var(--color-accent);
             border-radius: 4px;
-            transition: all 0.4s ease;
+            transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
             display: inline-block;
         }
 
-        .nav-btn-cta::after {
+        .nav-links a.nav-btn-cta::after {
             display: none;
             /* Hide the underline effect for the button */
         }
 
-        .nav-btn-cta:hover {
-            background-color: var(--color-accent) !important;
+        .nav-links a.nav-btn-cta:hover {
+            background-color: var(--color-accent);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(184, 168, 138, 0.3);
-            color: var(--color-black) !important;
-            background-image: none !important;
+            color: var(--color-black);
+            background-image: none;
         }
 
         .nav-links a::after {
@@ -1503,7 +1503,7 @@
                 font-size: 0.75rem;
             }
 
-            .nav-btn-cta {
+            .nav-links a.nav-btn-cta {
                 padding: 8px 16px;
             }
         }
